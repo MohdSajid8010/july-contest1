@@ -1,38 +1,180 @@
-.App {
-  text-align: center;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  background-color: rgba(177, 217, 219, 1);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 100vw;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.leftComponent {
+  /* border: 2px solid black; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.leftComponent .left {
+  /* border: 2px solid red; */
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 10%;
+
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.left img {
+  /* border: 2px solid red; */
+  width: 35%;
+  transform: rotate(-8deg);
+  top: 21%;
+  left: 7%;
+  position: absolute;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.sign-up-comp {
+  /* border: 2px solid navy; */
+
+  background-color: white;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.sign-up-comp h1,
+h3 {
+  color: gray;
+
+}
+
+.sign-up-comp h1 {
+  align-self: flex-start;
+  margin-left: 20%;
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 1);
+
+}
+
+.sign-up-comp .logo-cont {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 2px solid red; */
+  gap: 20px;
+  width: 60%;
+  margin: 25px 0px;
+
+}
+
+.fac-logo,
+.gog-logo {
+  border: 2px solid grey;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 10px;
+}
+
+.sign-up-comp form {
+  /* border: 2px solid saddlebrown; */
+  width: 60%;
+
+}
+
+form .input-cont {
+  width: 100%;
+  height: 60px;
+  /* border: 2px solid red; */
+  margin-bottom: 10px;
+  position: relative;
+
+}
+
+form input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid grey;
+  padding: 10px 1px;
+  font-size: 15px;
+  margin-bottom: 5px;
+
+}
+
+.eyeicon {
+  position: absolute;
+  top: 20%;
+  right: 1%;
+  cursor: pointer;
+  color: gray;
+
+}
+
+.errMsg {
+  color: red;
+  font-size: 14px;
+  width: 100%;
+}
+
+.succMsg {
+  color: rgba(177, 217, 219, 1);
+  font-weight: 600;
+  text-align: center;
+}
+
+form button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: rgba(177, 217, 219, 1);
+  border-radius: 10px;
+  font-weight: 800;
+  color: white;
+  margin: 15px 0px;
+  cursor: pointer;
+}
+
+@media (max-width:970px) {
+  .left img {
+    /* border: 2px solid red; */
+    width: 37%;
+    transform: rotate(-6deg);
+    top: 35%;
+    left: 3%;
+    position: absolute;
+
   }
-  to {
-    transform: rotate(360deg);
+
+  .fac-logo,
+  .gog-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 5px
+  }
+
+  .leftComponent .left {
+    width: 96%;
+    margin-left: 2%;
+    margin-top: 10%;
+    font-size: 14px;
+
+    color: white;
   }
 }
